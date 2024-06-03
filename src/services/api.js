@@ -8,3 +8,11 @@ export const fetchCharacters = async (name = '') => {
   const data = await response.json()
   return data.data.results
 }
+
+export const fetchCharacterById = async (id) => {
+  const response = await fetch(
+    `${API_URL}public/characters/${id}?apikey=${API_KEY}`
+  )
+  const data = await response.json()
+  return data.data.results[0]
+}

@@ -1,10 +1,15 @@
-function App() {
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import CharacterList from './components/CharacterList'
+import CharacterDetail from './components/CharacterDetail'
+
+const App = () => {
   return (
-    <div className="">
-      <header className="">
-        <h1>Hola mundo</h1>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={CharacterList} />
+        <Route path="/character/:id" element={CharacterDetail} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
