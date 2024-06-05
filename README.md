@@ -137,66 +137,73 @@ napptilus-challenge/
 
 ### Routing
 
-The routing of the application is managed in App.jsx using react-router-dom. The routes include:
+The routing of the application is managed in `App.jsx` using `react-router-dom`. The routes include:
 
-/ - Main character list page (CharacterList component)
-/favorites - Favorites details page (FavoriteDetails component)
-/character/:id - Character detail page (CharacterDetail component)
+- `/` - Main character list page (`CharacterList` component)
+- `/favorites` - Favorites details page (`FavoriteDetails` component)
+- `/character/:id` - Character detail page (`CharacterDetail` component)
+- `*` - Error 404 page (`Error404` component)
 
-- - Error 404 page (Error404 component)
-    Services
-    api.jsx: Contains all the fetch requests to the API.
-    helpers: Includes hashing for the fetch requests.
-    Pages
-    Layout: Main layout component.
-    favoriteDetails: Favorites details view.
-    error404: Error 404 view.
-    charactersList: Characters list view.
-    characterDetail: Character detail view.
-    Each view has its own CSS file to facilitate future changes.
+### Services
 
-Hooks and Context
-useCharacters.jsx: Custom hook for character-related logic.
-CharacterContext.jsx: Context provider for managing the application's state.
-Components
-card: Hero card component.
-comics: Comics component.
-favorite: Heart (favorite) component.
-hero: Banner component.
-loader: Loader component.
-search: Search logic and results component.
-Global Styles
-globalStyle.css: Contains all CSS variables for the application.
-Requirements
-Testing Implementation: The project includes unit tests to ensure functionality.
-Responsive Design: The application is fully responsive.
-Accessibility: The application is accessible to users with disabilities.
-Linters and Formatters: The project uses ESLint, Prettier, and Stylelint to maintain code quality.
-Clean Console: The browser console is free from errors and warnings.
-Contributing
+- `api.jsx`: Contains all the fetch requests to the API.
+- `helpers`: Includes hashing for the fetch requests.
+
+### Pages
+
+- **Layout**: Main layout component.
+- **favoriteDetails**: Favorites details view.
+- **error404**: Error 404 view.
+- **charactersList**: Characters list view.
+- **characterDetail**: Character detail view.
+
+Each view has its own CSS file to facilitate future changes.
+
+### Hooks and Context
+
+- `useCharacters.jsx`: Custom hook for character-related logic.
+- `CharacterContext.jsx`: Context provider for managing the application's state.
+
+### Components
+
+- **card**: Hero card component.
+- **comics**: Comics component.
+- **favorite**: Heart (favorite) component.
+- **hero**: Banner component.
+- **loader**: Loader component.
+- **search**: Search logic and results component.
+
+### Global Styles
+
+- `globalStyle.css`: Contains all CSS variables for the application.
+
+### Requirements
+
+- **Testing Implementation**: The project includes unit tests to ensure functionality.
+- **Responsive Design**: The application is fully responsive.
+- **Accessibility**: The application is accessible to users with disabilities.
+- **Linters and Formatters**: The project uses ESLint, Prettier, and Stylelint to maintain code quality.
+- **Clean Console**: The browser console is free from errors and warnings.
+
+### Contributing
+
 If you would like to contribute to this project, please follow these steps:
 
-Fork the repository.
-Create a new branch (git checkout -b feature-branch).
-Make your changes.
-Commit your changes (git commit -m 'Add some feature').
-Push to the branch (git push origin feature-branch).
-Open a Pull Request.
-License
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a Pull Request.
+
+### License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Repository Link
+### Repository Link
+
+[https://github.com/danielemazzola/napptilus-zaraw-challenge](https://github.com/danielemazzola/napptilus-zaraw-challenge)
+
+---
 
 Made by Daniele Mazzola
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
