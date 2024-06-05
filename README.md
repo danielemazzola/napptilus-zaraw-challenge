@@ -45,14 +45,12 @@ Running the Application
 To start the development server, run:
 
 bash
-Copiar código
 npm start
 This will run the app in development mode. Open http://localhost:3000 to view it in your browser.
 
 To build the app for production, run:
 
 bash
-Copiar código
 npm run build
 Project Structure
 Dependencies
@@ -86,7 +84,7 @@ lint:styles	Lints CSS and SCSS files.
 format	Formats JavaScript, JSX, CSS, and SCSS files.
 File and Folder Structure
 plaintext
-Copiar código
+
 napptilus-challenge/
 ├── public/
 ├── src/
