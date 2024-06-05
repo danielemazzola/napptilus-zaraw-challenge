@@ -46,14 +46,11 @@ const CharacterProvider = ({ children }) => {
   }
 
   const handleSearch = async (word) => {
-    try {
-      setLoading(true)
-      setResultSearch(await fetchSearchCharacter(word))
-      if (resultSearch <= 0) setResultSearch({ message: 'Sin resultados' })
-      setLoading(false)
-    } catch (error) {
-      console.log(error)
-    }
+    setLoading(true)
+    const result = await fetchSearchCharacter(word)
+    if (result.results <= 0) setResultSearch({ message: 'Sin resultados' })
+    else setResultSearch(result)
+    setLoading(false)
   }
 
   return (
