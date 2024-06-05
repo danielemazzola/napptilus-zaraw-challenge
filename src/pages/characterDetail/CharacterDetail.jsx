@@ -6,41 +6,67 @@ import { FavoriteTrue, FavoriteFalse } from '../../components/favorite/Favorite'
 const CharacterDetail = () => {
   const location = useLocation()
   let id = location.pathname.split('/')[2]
-  const { handleGetCharacter, character, favorite, handleFavorite } =
+  const { handleGetCharacter, character, comics, favorite, handleFavorite } =
     useCharacters()
 
   useEffect(() => {
     handleGetCharacter(id)
   }, [])
+
   const isFavorite = favorite.some(
     (el) => el.id.toString() === character?.results[0].id.toString()
   )
   return (
-    <div>
+    <div id="container-details">
       {character?.results.map((val, index) => (
-        <div key={index} className="characterContainer">
-          <div className="container-image">
-            <img
-              src={`${val.thumbnail.path}.${val.thumbnail.extension}`}
-              alt={val.name}
-              loading="lazy"
-            />
-          </div>
-          <div className="container-description">
-            <div className="container-title">
-              <h2>{val.name}</h2>
-              <div
-                onClick={() => {
-                  handleFavorite(character.results[0])
-                }}
-              >
-                {isFavorite ? <FavoriteTrue /> : <FavoriteFalse />}
-              </div>
+        <div key={index} id="characterContainer">
+          <div className="characterContainer">
+            <div className="container-image">
+              <img
+                src={`${val.thumbnail.path}.${val.thumbnail.extension}`}
+                alt={val.name}
+                loading="lazy"
+              />
             </div>
-            <p>{val.description}</p>
+            <div className="container-description">
+              <div className="container-title">
+                <h2>{val.name}</h2>
+                <div
+                  onClick={() => {
+                    handleFavorite(character.results[0])
+                  }}
+                >
+                  {isFavorite ? <FavoriteTrue /> : <FavoriteFalse />}
+                </div>
+              </div>
+              <p>{val.description}</p>
+            </div>
           </div>
         </div>
       ))}
+      <div className="containerComics">
+        <div className="containComics">
+          <div className="titleContainer">
+            <h3>Comics</h3>
+          </div>
+          <div className="containComic">
+            {comics?.results
+              .map((ele, index) => (
+                <div key={index}>
+                  <div className="container-images">
+                    <img
+                      src={`${ele.thumbnail.path}.${ele.thumbnail.extension}`}
+                      alt={ele.title}
+                      loading="lazy"
+                    />
+                    <p>{ele.title}</p>
+                  </div>
+                </div>
+              ))
+              .reverse()}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

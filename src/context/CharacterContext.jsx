@@ -1,11 +1,16 @@
 import { useState, createContext } from 'react'
-import { fetchCharacters, fetchCharacterById } from '../services/api'
+import {
+  fetchCharacters,
+  fetchCharacterById,
+  fetchComicsByCharacter,
+} from '../services/api'
 
 const CharacterContext = createContext()
 const CharacterProvider = ({ children }) => {
   const [loading, setLoading] = useState(false)
   const [characters, setCharacters] = useState()
   const [character, setCharacter] = useState()
+  const [comics, setComics] = useState()
   const [favorite, setFavorite] = useState([])
 
   const getCharacters = async () => {
@@ -20,13 +25,14 @@ const CharacterProvider = ({ children }) => {
     setLoading(true)
     if (!character || character.results[0].id.toString() !== id.toString()) {
       setCharacter()
+      setComics()
       setCharacter(await fetchCharacterById(id))
+      setComics(await fetchComicsByCharacter(id))
     }
     setLoading(false)
   }
 
   const handleFavorite = (character) => {
-    console.log(character)
     const isFavorite = favorite.some((ele) => ele.id === character.id)
     if (!isFavorite) {
       setFavorite([...favorite, character])
@@ -43,6 +49,7 @@ const CharacterProvider = ({ children }) => {
         setLoading,
         characters,
         character,
+        comics,
         favorite,
         setFavorite,
 
