@@ -10,15 +10,14 @@ const Search = ({ length }) => {
   const onSearchChange = (e) => {
     setSearchTerm(e.target.value)
   }
+  const onSearchClick = () => {
+    handleSearch(searchTerm)
+  }
   useEffect(() => {
     if (searchTerm === '') {
       setResultSearch([])
     }
   }, [searchTerm])
-
-  const onSearchClick = () => {
-    handleSearch(searchTerm)
-  }
 
   return (
     <div className="container-search">
