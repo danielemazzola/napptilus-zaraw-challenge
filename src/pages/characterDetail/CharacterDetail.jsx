@@ -19,6 +19,7 @@ const CharacterDetail = () => {
             <img
               src={`${val.thumbnail.path}.${val.thumbnail.extension}`}
               alt={val.name}
+              loading="lazy"
             />
           </div>
           <div className="container-description">

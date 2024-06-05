@@ -5,15 +5,24 @@
   align-items: center;
   justify-content: space-between;
 }
-.hero > h1 {
-  color: white;
+.hero > a {
+  transition: all 0.3s;
 }
 .hero > div {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.hero > div > span {
+.hero > a:hover {
+  transform: scale(1.1);
+}
+.favoritesLength {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.favoritesLength > span {
   color: white;
-  font-size: 10px;
+  font-size: 12px;
 }

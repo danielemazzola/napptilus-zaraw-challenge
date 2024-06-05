@@ -6,9 +6,10 @@ const CharacterProvider = ({ children }) => {
   const [loading, setLoading] = useState(false)
   const [characters, setCharacters] = useState()
   const [character, setCharacter] = useState()
+  const [favorite, setFavorite] = useState([])
 
   const getCharacters = async () => {
-    let limit = 100
+    let limit = 50
     let offset = 0
     setLoading(true)
     setCharacters(await fetchCharacters(limit, offset))
@@ -18,6 +19,7 @@ const CharacterProvider = ({ children }) => {
   const handleGetCharacter = async (id) => {
     setLoading(true)
     if (!character || character.results[0].id.toString() !== id.toString()) {
+      setCharacter()
       setCharacter(await fetchCharacterById(id))
     }
     setLoading(false)
@@ -30,6 +32,8 @@ const CharacterProvider = ({ children }) => {
         setLoading,
         characters,
         character,
+        favorite,
+        setFavorite,
 
         // FUNCTION
         getCharacters,
