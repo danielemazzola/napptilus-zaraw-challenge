@@ -107,23 +107,23 @@ napptilus-challenge/
 ├── src/
 │ ├── components/
 │ │ ├── card/
-│ │   ├── Card.jsx
-│ │   ├── card.css
+│ │ │ ├── Card.jsx
+│ │ │ ├── card.css
 │ │ ├── comics/
-│ │   ├── Comics.jsx
-│ │   ├── comics.css
+│ │ │ ├── Comics.jsx
+│ │ │ ├── comics.css
 │ │ ├── favorite/
-│ │   ├── Favorite.jsx
-│ │   ├── favorite.css
+│ │ │ ├── Favorite.jsx
+│ │ │ ├── favorite.css
 │ │ ├── hero/
-│ │   ├── Hero.jsx
-│ │   ├── hero.css
+│ │ │ ├── Hero.jsx
+│ │ │ ├── hero.css
 │ │ ├── loader/
-│ │   ├── Loader.jsx
-│ │   ├── loader.css
-│ │ └── search/
-│ │   ├── Search.jsx
-│ │   ├── search.css
+│ │ │ ├── Loader.jsx
+│ │ │ ├── loader.css
+│ │ ├── search/
+│ │ │ ├── Search.jsx
+│ │ │ ├── search.css
 │ ├── context/
 │ │ └── CharacterContext.jsx
 │ ├── hooks/
