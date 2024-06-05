@@ -22,12 +22,13 @@ const CharacterProvider = ({ children }) => {
   }
 
   const handleGetCharacter = async (id) => {
+    let limit = 20
     setLoading(true)
     if (!character || character.results[0].id.toString() !== id.toString()) {
       setCharacter()
       setComics()
       setCharacter(await fetchCharacterById(id))
-      setComics(await fetchComicsByCharacter(id))
+      setComics(await fetchComicsByCharacter(limit, id))
     }
     setLoading(false)
   }

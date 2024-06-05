@@ -5,8 +5,8 @@ const FavoriteTrue = () => {
     <div className="favorite">
       <div className="favorite-true">
         <svg
-          width="24"
-          height="21.68"
+          width="23"
+          height="20"
           viewBox="0 0 13 12"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -28,8 +28,8 @@ const FavoriteFalse = () => {
     <div className="favorite">
       <div className="favorite-false">
         <svg
-          width="24"
-          height="21.68"
+          width="22"
+          height="19"
           viewBox="0 0 15 14"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

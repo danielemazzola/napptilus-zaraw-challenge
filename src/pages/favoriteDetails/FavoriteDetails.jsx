@@ -1,27 +1,34 @@
 import './favorites.css'
 import useCharacters from '../../hook/useCharacters'
 import Card from '../../components/card/Card'
+import Search from '../../components/search/Search'
 
 const FavoriteDetails = () => {
   const { favorite } = useCharacters()
-
   if (!favorite.length)
     return (
-      <div className="container">
-        You have no favorites 😢. Please click the logo to return home.
+      <div className="margin">
+        <Search length={favorite.length} />
+        <p>You have no favorites 😢. Please click the logo to return home.</p>
       </div>
     )
   else
     return (
       <div className="margin">
-        <div className="container">
-          {favorite
-            ?.map((character, index) => (
-              <div key={index}>
-                <Card character={character} />
-              </div>
-            ))
-            .reverse()}
+        <Search length={favorite.length} />
+        <div className="containerFavorite">
+          <div>
+            <h3>Favorites</h3>
+          </div>
+          <div className="containerCards">
+            {favorite
+              ?.map((character, index) => (
+                <div key={index}>
+                  <Card character={character} />
+                </div>
+              ))
+              .reverse()}
+          </div>
         </div>
       </div>
     )

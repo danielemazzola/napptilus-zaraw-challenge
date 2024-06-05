@@ -1,0 +1,21 @@
+.container-images {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.container-images > img {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  object-fit: cover;
+  transition: all 0.2s;
+}
+.container-images > p {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 10px 0;
+}
+.container-images > img:hover {
+  transform: scale(1.03);
+}

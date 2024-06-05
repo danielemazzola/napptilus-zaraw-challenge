@@ -23,10 +23,10 @@ export const fetchCharacterById = async (id) => {
     console.log(error)
   }
 }
-export const fetchComicsByCharacter = async (id) => {
+export const fetchComicsByCharacter = async (limit, id) => {
   try {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}:443/v1/public/characters/${id}/comics?${MARVEL_KEY()}`
+      `${process.env.REACT_APP_API_URL}:443/v1/public/characters/${id}/comics?limit=${limit}&${MARVEL_KEY()}`
     )
     const data = await response.json()
     return data.data

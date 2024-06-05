@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import useCharacters from '../../hook/useCharacters'
 import { FavoriteTrue, FavoriteFalse } from '../../components/favorite/Favorite'
+import Comics from '../../components/comics/Comics'
 const CharacterDetail = () => {
   const location = useLocation()
   let id = location.pathname.split('/')[2]
@@ -53,14 +54,7 @@ const CharacterDetail = () => {
             {comics?.results
               .map((ele, index) => (
                 <div key={index}>
-                  <div className="container-images">
-                    <img
-                      src={`${ele.thumbnail.path}.${ele.thumbnail.extension}`}
-                      alt={ele.title}
-                      loading="lazy"
-                    />
-                    <p>{ele.title}</p>
-                  </div>
+                  <Comics comic={ele} />
                 </div>
               ))
               .reverse()}

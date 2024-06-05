@@ -13,7 +13,7 @@ const CharacterList = () => {
 
   return (
     <div className="margin">
-      <Search />
+      <Search length={characters?.count} />
       <div className="container">
         {characters?.results?.map((character, index) => (
           <div key={index}>
