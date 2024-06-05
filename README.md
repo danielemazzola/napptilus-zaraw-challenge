@@ -158,8 +158,103 @@ The routing of the application is managed in `App.jsx` using `react-router-dom`.
 
 ### Services
 
-- `api.jsx`: Contains all the fetch requests to the API.
-- `helpers`: Includes hashing for the fetch requests.
+#### api.jsx
+
+`api.jsx` contains all the fetch requests to the Marvel API. Below are the details of each asynchronous function:
+
+1. **fetchCharacters**
+
+   ```javascript
+   export const fetchCharacters = async (limit, offset) => {
+     try {
+       const response = await fetch(
+         `${process.env.REACT_APP_API_URL}/v1/public/characters?limit=${limit}&offset=${offset}&${MARVEL_KEY()}`
+       )
+       const data = await response.json()
+       return data.data
+     } catch (error) {
+       console.log(error)
+     }
+   }
+   ```
+
+   - **Description**: Fetches a list of characters from the Marvel API with pagination.
+   - **Parameters**:
+     - `limit`: The number of characters to fetch.
+     - `offset`: The offset for pagination.
+   - **Returns**: A promise that resolves to the data containing the list of characters.
+   - **Error Handling**: Logs errors to the console.
+
+2. **fetchCharacterById**
+
+   ```javascript
+   export const fetchCharacterById = async (id) => {
+     try {
+       const response = await fetch(
+         `${process.env.REACT_APP_API_URL}:443/v1/public/characters/${id}?${MARVEL_KEY()}`
+       )
+       const data = await response.json()
+       return data.data
+     } catch (error) {
+       console.log(error)
+     }
+   }
+   ```
+
+   - **Description**: Fetches details of a specific character by their ID.
+   - **Parameters**:
+     - `id`: The ID of the character to fetch.
+   - **Returns**: A promise that resolves to the data containing the character's details.
+   - **Error Handling**: Logs errors to the console.
+
+3. **fetchComicsByCharacter**
+
+   ```javascript
+   export const fetchComicsByCharacter = async (limit, id) => {
+     try {
+       const response = await fetch(
+         `${process.env.REACT_APP_API_URL}:443/v1/public/characters/${id}/comics?limit=${limit}&${MARVEL_KEY()}`
+       )
+       const data = await response.json()
+       return data.data
+     } catch (error) {
+       console.log(error)
+     }
+   }
+   ```
+
+   - **Description**: Fetches a list of comics in which a specific character appears.
+   - **Parameters**:
+     - `limit`: The number of comics to fetch.
+     - `id`: The ID of the character.
+   - **Returns**: A promise that resolves to the data containing the list of comics.
+   - **Error Handling**: Logs errors to the console.
+
+4. **fetchSearchCharacter**
+
+   ```javascript
+   export const fetchSearchCharacter = async (word) => {
+     try {
+       const response = await fetch(
+         `${process.env.REACT_APP_API_URL}:443/v1/public/characters?nameStartsWith=${word}&&${MARVEL_KEY()}`
+       )
+       const data = await response.json()
+       return data.data
+     } catch (error) {
+       console.log(error)
+     }
+   }
+   ```
+
+   - **Description**: Searches for characters whose names start with a specific word.
+   - **Parameters**:
+     - `word`: The starting letters of the character's name to search for.
+   - **Returns**: A promise that resolves to the data containing the search results.
+   - **Error Handling**: Logs errors to the console.
+
+#### helpers
+
+The `helpers` module includes functions for hashing necessary data for the fetch requests to ensure security and proper API usage.
 
 ### Pages
 
