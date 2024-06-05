@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 0 0 30px 0;
 }
 .characterContainer {
   width: 70%;
@@ -94,5 +95,8 @@
   }
   .containComics {
     width: 95%;
+  }
+  #characterContainer {
+    border-radius: 0px;
   }
 }

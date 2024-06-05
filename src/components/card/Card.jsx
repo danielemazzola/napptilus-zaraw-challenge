@@ -4,8 +4,7 @@ import { FavoriteTrue, FavoriteFalse } from '../favorite/Favorite'
 import useCharacters from '../../hook/useCharacters'
 
 const Card = ({ character }) => {
-  const { favorite, setFavorite, handleGetCharacter, handleFavorite } =
-    useCharacters()
+  const { favorite, handleGetCharacter, handleFavorite } = useCharacters()
 
   const isFavorite = favorite.some(
     (el) => el.id.toString() === character.id.toString()
@@ -25,6 +24,7 @@ const Card = ({ character }) => {
           />
         </div>
       </Link>
+      <div className="line"></div>
       <div className="contain-card">
         <h2>{character.name}</h2>
         <div

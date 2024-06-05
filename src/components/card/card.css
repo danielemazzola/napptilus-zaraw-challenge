@@ -1,9 +1,7 @@
 .card-character {
   width: 189.97px;
-  height: 250px;
   position: relative;
   overflow: hidden;
-  background-color: red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,6 +19,11 @@
   object-fit: cover;
   transition: transform 0.3s ease;
 }
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: red;
+}
 .contain-card {
   background-color: black;
   height: 60px;
@@ -28,8 +31,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  border-radius: 0 0 17px 0;
 }
-
 .contain-card > h2 {
   color: white;
   font-size: 14px;
