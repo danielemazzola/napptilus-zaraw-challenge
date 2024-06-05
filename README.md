@@ -38,101 +38,122 @@ Make sure you have Node.js and npm installed on your machine. You can download N
 Clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/danielemazzola/napptilus-zaraw-challenge.git
-cd napptilus-zaraw-challenge
+git clone https://github.com/your-username/napptilus-challenge.git
+cd napptilus-challenge
 npm install
-Running the Application
+```
+
+### Running the Application
+
 To start the development server, run:
 
-bash
+```bash
 npm start
+```
+
 This will run the app in development mode. Open http://localhost:3000 to view it in your browser.
 
 To build the app for production, run:
 
-bash
+```bash
 npm run build
-Project Structure
-Dependencies
-Package	Version
-js-md5	^0.8.3
-react	^18.3.1
-react-dom	^18.3.1
-react-router-dom	^6.23.1
-react-scripts	5.0.1
-web-vitals	^2.1.4
-DevDependencies
-Package	Version
-@testing-library/jest-dom	^6.4.5
-@testing-library/react	^15.0.7
-@testing-library/user-event	^14.5.2
-eslint	^8.57.0
-eslint-config-prettier	^9.1.0
-eslint-plugin-prettier	^5.1.3
-prettier	^3.3.0
-stylelint	^16.6.1
-stylelint-config-standard	^36.0.0
-stylelint-prettier	^5.0.0
-Scripts
-Script	Description
-start	Runs the app in development mode.
-build	Builds the app for production.
-test	Runs the test suite.
-eject	Ejects the app configuration.
-lint	Lints JavaScript and JSX files.
-lint:styles	Lints CSS and SCSS files.
-format	Formats JavaScript, JSX, CSS, and SCSS files.
-File and Folder Structure
-plaintext
+```
 
+### Project Structure
+
+### Dependencies
+
+| Package            | Version   |
+| ------------------ | --------- |
+| `js-md5`           | `^0.8.3`  |
+| `react`            | `^18.3.1` |
+| `react-dom`        | `^18.3.1` |
+| `react-router-dom` | `^6.23.1` |
+| `react-scripts`    | `5.0.1`   |
+| `web-vitals`       | `^2.1.4`  |
+
+### DevDependencies
+
+| Package                       | Version   |
+| ----------------------------- | --------- |
+| `@testing-library/jest-dom`   | `^6.4.5`  |
+| `@testing-library/react`      | `^15.0.7` |
+| `@testing-library/user-event` | `^14.5.2` |
+| `eslint`                      | `^8.57.0` |
+| `eslint-config-prettier`      | `^9.1.0`  |
+| `eslint-plugin-prettier`      | `^5.1.3`  |
+| `prettier`                    | `^3.3.0`  |
+| `stylelint`                   | `^16.6.1` |
+| `stylelint-config-standard`   | `^36.0.0` |
+| `stylelint-prettier`          | `^5.0.0`  |
+
+### Scripts
+
+| Script        | Description                                   |
+| ------------- | --------------------------------------------- |
+| `start`       | Runs the app in development mode.             |
+| `build`       | Builds the app for production.                |
+| `test`        | Runs the test suite.                          |
+| `eject`       | Ejects the app configuration.                 |
+| `lint`        | Lints JavaScript and JSX files.               |
+| `lint:styles` | Lints CSS and SCSS files.                     |
+| `format`      | Formats JavaScript, JSX, CSS, and SCSS files. |
+
+### File and Folder Structure
+
+```plaintext
 napptilus-challenge/
 ├── public/
 ├── src/
-│   ├── components/
-│   │   ├── card/
-│   │   ├── comics/
-│   │   ├── favorite/
-│   │   ├── hero/
-│   │   ├── loader/
-│   │   └── search/
-│   ├── context/
-│   │   └── CharacterContext.jsx
-│   ├── hooks/
-│   │   └── useCharacters.jsx
-│   ├── pages/
-│   │   ├── Layout/
-│   │   ├── favoriteDetails/
-│   │   ├── error404/
-│   │   ├── charactersList/
-│   │   └── characterDetail/
-│   ├── services/
-│   │   ├── api.jsx
-│   │   └── helpers/
-│   ├── App.jsx
-│   ├── index.js
-│   └── globalStyle.css
+│ ├── components/
+│ │ ├── card/
+│ │ ├── comics/
+│ │ ├── favorite/
+│ │ ├── hero/
+│ │ ├── loader/
+│ │ └── search/
+│ ├── context/
+│ │ └── CharacterContext.jsx
+│ ├── hooks/
+│ │ └── useCharacters.jsx
+│ ├── pages/
+│ │ ├── Layout/
+│ │ ├── favoriteDetails/
+│ │ ├── error404/
+│ │ ├── charactersList/
+│ │ └── characterDetail/
+│ ├── services/
+│ │ ├── api.jsx
+│ │ └── helpers/
+│ ├── App.jsx
+│ ├── index.js
+│ └── globalStyle.css
 ├── .eslintrc.json
 ├── .prettierrc
 ├── .stylelintrc
 ├── package.json
 └── README.md
-Routing
+```
+
+### Routing
+
 The routing of the application is managed in App.jsx using react-router-dom. The routes include:
 
 / - Main character list page (CharacterList component)
 /favorites - Favorites details page (FavoriteDetails component)
 /character/:id - Character detail page (CharacterDetail component)
-* - Error 404 page (Error404 component)
-Services
-api.jsx: Contains all the fetch requests to the API.
-helpers: Includes hashing for the fetch requests.
-Pages
-Layout: Main layout component.
-favoriteDetails: Favorites details view.
-error404: Error 404 view.
-charactersList: Characters list view.
-characterDetail: Character detail view.
-Each view has its own CSS file to facilitate future changes.
+
+- - Error 404 page (Error404 component)
+    Services
+    api.jsx: Contains all the fetch requests to the API.
+    helpers: Includes hashing for the fetch requests.
+    Pages
+    Layout: Main layout component.
+    favoriteDetails: Favorites details view.
+    error404: Error 404 view.
+    charactersList: Characters list view.
+    characterDetail: Character detail view.
+    Each view has its own CSS file to facilitate future changes.
 
 Hooks and Context
 useCharacters.jsx: Custom hook for character-related logic.
@@ -167,4 +188,15 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Repository Link
 
 Made by Daniele Mazzola
+
+```
+
+```
+
+```
+
+```
+
+```
+
 ```
