@@ -1,14 +1,14 @@
 #container-details {
-  width: 100%;
+  width: var(--dani-full);
 }
 #characterContainer {
-  width: 100%;
-  background-color: black;
+  width: var(--dani-full);
+  background-color: var(--dani-black-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 30px 0;
+  border-radius: 0 0 var(--dani-l) 0;
 }
 .characterContainer {
   width: 70%;
@@ -18,53 +18,50 @@
 }
 .container-image {
   width: 40%;
-  height: 100%;
+  height: var(--dani-full);
   display: flex;
 }
 .container-image > img {
   object-fit: cover;
-  width: 100%;
+  width: var(--dani-full);
 }
 .container-description {
-  padding: 20px 40px;
-  color: white;
+  padding: var(--dani-m) 40px;
+  color: var(--dani-white-color);
   display: flex;
   flex-direction: column;
   width: 60%;
   align-items: start;
-  gap: 10px;
+  gap: var(--dani-s);
 }
 .container-title {
-  width: 100%;
+  width: var(--dani-full);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.container-description > div > h2 {
-  font-size: 2.5rem;
-}
 .containerComics {
-  width: 100%;
+  width: var(--dani-full);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .containComics {
-  background-color: white;
+  background-color: var(--dani-white-color);
   width: 70%;
-  margin: 20px 0;
+  margin: var(--dani-m) 0;
 }
 .titleContainer {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 600;
-  margin: 20px 0;
+  margin: var(--dani-m) 0;
 }
 .containComic {
   display: flex;
-  gap: 10px;
-  width: 100%;
-  padding: 20px 0;
+  gap: var(--dani-s);
+  width: var(--dani-full);
+  padding: var(--dani-m) 0;
   overflow-x: auto;
 }
 
@@ -80,18 +77,18 @@
 }
 @media (max-width: 680px) {
   .characterContainer {
-    width: 100%;
+    width: var(--dani-full);
     height: auto;
     flex-direction: column;
   }
   .container-image {
-    width: 100%;
+    width: var(--dani-full);
     height: auto;
   }
   .container-description {
     width: auto;
     height: auto;
-    padding: 20px 10px;
+    padding: var(--dani-m) 10px;
   }
   .containComics {
     width: 95%;

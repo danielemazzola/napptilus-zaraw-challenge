@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+24+Charted&family=Jersey+10&family=Khand:wght@700&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300;500&family=Yrsa&display=swap');
 
 :root {
-  --dani-primary-color: rgb(255, 255, 255);
+  --dani-white-color: rgb(255, 255, 255);
   --dani-black-color: rgb(0, 0, 0);
   --dani-red-color: rgb(255, 0, 0);
-  --dani-xs: 10px;
-  --dani-s: 15px;
-  --dani-m: 30px;
-  --dani-l: 40px;
+  --dani-xs: 5px;
+  --dani-s: 10px;
+  --dani-15: 15px;
+  --dani-m: 20px;
+  --dani-l: 30px;
   --dani-xl: 50px;
   --dani-xxl: 80px;
   --dani-full: 100%;
@@ -24,18 +25,24 @@ html {
 a {
   text-decoration: none;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-size: 24px;
+}
 
 ::-webkit-scrollbar {
-  width: 20px;
-  background-color: red;
+  width: var(--dani-m);
+  background-color: var(--dani-red-color);
 }
 ::-webkit-scrollbar-track {
   background-color: var(--primary);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: black;
+  background-color: var(--dani-black-color);
   background-image: url('https://i.pinimg.com/originals/8d/12/f0/8d12f0382048031467ab02c9956be173.png');
-  background-size: 30px;
+  background-size: var(--dani-xl);
   background-repeat: no-repeat;
   background-position: center;
 }

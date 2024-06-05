@@ -1,11 +1,11 @@
 .margin {
-  margin: 0 30px;
+  margin: 0 var(--dani-l);
 }
 .container {
-  width: 100%;
+  width: var(--dani-full);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+  gap: var(--dani-s);
+  margin: var(--dani-m) 0;
 }

@@ -9,33 +9,33 @@
 }
 .image-card {
   display: flex;
-  width: 100%;
+  width: var(--dani-full);
   height: 185px;
 }
 .image-card > img {
-  width: 100%;
-  height: 100%;
+  width: var(--dani-full);
+  height: var(--dani-full);
   display: flex;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 .line {
-  width: 100%;
+  width: var(--dani-full);
   height: 3px;
-  background-color: red;
+  background-color: var(--dani-red-color);
 }
 .contain-card {
-  background-color: black;
+  background-color: var(--dani-black-color);
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 var(--dani-s);
   border-radius: 0 0 17px 0;
 }
 .contain-card > h2 {
   color: white;
-  font-size: 14px;
+  font-size: var(--dani-15);
 }
 
 .card-character:hover .image-card img:hover {

@@ -18,7 +18,7 @@ const FavoriteDetails = () => {
         <Search length={favorite.length} />
         <div className="containerFavorite">
           <div>
-            <h3>Favorites</h3>
+            <h1>Favorites</h1>
           </div>
           <div className="containerCards">
             {favorite

@@ -1,9 +1,9 @@
 .container-search {
-  width: 100%;
-  padding: 10px 0;
+  width: var(--dani-full);
+  padding: var(--dani-s) 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--dani-s);
 }
 .container-search > div > button {
   border-style: none;
@@ -12,24 +12,24 @@
 }
 .container-search > div {
   border-bottom: 1px solid gray;
-  padding: 10px 0;
+  padding: var(--dani-s) 0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--dani-s);
 }
 .container-search > div > input {
   border-style: none;
-  width: 100%;
-  padding: 10px;
+  width: var(--dani-full);
+  padding: var(--dani-s);
   transition: all 0.3s;
 }
 .container-search > div > input:focus {
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: var(--dani-15);
 }
 .container-search > p {
-  font-size: 14px;
+  font-size: var(--dani-15);
   font-weight: 600;
   text-transform: uppercase;
 }

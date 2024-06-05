@@ -4,17 +4,17 @@
   width: 300px;
 }
 .container-images > img {
-  width: 100%;
+  width: var(--dani-full);
   height: 380px;
   display: flex;
   object-fit: cover;
   transition: all 0.2s;
 }
 .container-images > p {
-  font-size: 16px;
+  font-size: var(--dani-15);
   text-transform: uppercase;
   font-weight: 800;
-  padding: 10px 0;
+  padding: var(--dani-s) 0;
 }
 .container-images > img:hover {
   transform: scale(1.03);

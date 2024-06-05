@@ -48,7 +48,7 @@ const CharacterDetail = () => {
       <div className="containerComics">
         <div className="containComics">
           <div className="titleContainer">
-            <h3>Comics</h3>
+            <h1>Comics</h1>
           </div>
           <div className="containComic">
             {comics?.results
