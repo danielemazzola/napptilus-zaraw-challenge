@@ -9,6 +9,7 @@ export const fetchCharacters = async (limit, offset) => {
     return data.data
   } catch (error) {
     console.log(error)
+    return
   }
 }
 
@@ -21,6 +22,7 @@ export const fetchCharacterById = async (id) => {
     return data.data
   } catch (error) {
     console.log(error)
+    return
   }
 }
 export const fetchComicsByCharacter = async (limit, id) => {
@@ -32,16 +34,18 @@ export const fetchComicsByCharacter = async (limit, id) => {
     return data.data
   } catch (error) {
     console.log(error)
+    return
   }
 }
 export const fetchSearchCharacter = async (word) => {
   try {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}:443/v1/public/characters?nameStartsWith=${word}&&${MARVEL_KEY()}`
+      `${process.env.REACT_APP_API_URL}:443/v1/public/characters?nameStartsWith=${word}&${MARVEL_KEY()}`
     )
     const data = await response.json()
     return data.data
   } catch (error) {
     console.log(error)
+    return
   }
 }

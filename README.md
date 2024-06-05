@@ -174,6 +174,7 @@ The routing of the application is managed in `App.jsx` using `react-router-dom`.
        return data.data
      } catch (error) {
        console.log(error)
+       return
      }
    }
    ```
@@ -197,6 +198,7 @@ The routing of the application is managed in `App.jsx` using `react-router-dom`.
        return data.data
      } catch (error) {
        console.log(error)
+       return
      }
    }
    ```
@@ -219,6 +221,7 @@ The routing of the application is managed in `App.jsx` using `react-router-dom`.
        return data.data
      } catch (error) {
        console.log(error)
+       return
      }
    }
    ```
@@ -236,12 +239,13 @@ The routing of the application is managed in `App.jsx` using `react-router-dom`.
    export const fetchSearchCharacter = async (word) => {
      try {
        const response = await fetch(
-         `${process.env.REACT_APP_API_URL}:443/v1/public/characters?nameStartsWith=${word}&&${MARVEL_KEY()}`
+         `${process.env.REACT_APP_API_URL}:443/v1/public/characters?nameStartsWith=${word}&${MARVEL_KEY()}`
        )
        const data = await response.json()
        return data.data
      } catch (error) {
        console.log(error)
+       return
      }
    }
    ```
