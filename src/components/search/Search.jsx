@@ -1,10 +1,29 @@
 import './search.css'
+import useCharacters from '../../hook/useCharacters'
+import { useEffect, useState } from 'react'
+import Card from '../card/Card'
 
 const Search = ({ length }) => {
+  const { handleSearch, resultSearch, setResultSearch } = useCharacters()
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const onSearchChange = (e) => {
+    setSearchTerm(e.target.value)
+  }
+  useEffect(() => {
+    if (searchTerm === '') {
+      setResultSearch([])
+    }
+  }, [searchTerm])
+
+  const onSearchClick = () => {
+    handleSearch(searchTerm)
+  }
+
   return (
     <div className="container-search">
       <div>
-        <button>
+        <button type="button" onClick={onSearchClick}>
           <svg
             width="13"
             height="13"
@@ -19,9 +38,31 @@ const Search = ({ length }) => {
           </svg>
         </button>
 
-        <input type="search" placeholder="SEARCH CHARACTER..." />
+        <input
+          id="search"
+          type="search"
+          value={searchTerm}
+          onChange={onSearchChange}
+          placeholder="SEARCH CHARACTER..."
+        />
       </div>
-      <p>{length} results</p>
+      {resultSearch.message && <p> Sin resultados</p>}
+      <p>{resultSearch?.results?.length || length} results</p>
+      {resultSearch?.results?.length > 0 && (
+        <div>
+          <div className="container">
+            {resultSearch.message ? (
+              <p>Sin resultados</p>
+            ) : (
+              resultSearch?.results?.map((character, index) => (
+                <div key={index}>
+                  <Card character={character} />
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

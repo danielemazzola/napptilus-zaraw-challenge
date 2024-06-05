@@ -3,6 +3,7 @@ import {
   fetchCharacters,
   fetchCharacterById,
   fetchComicsByCharacter,
+  fetchSearchCharacter,
 } from '../services/api'
 
 const CharacterContext = createContext()
@@ -12,6 +13,7 @@ const CharacterProvider = ({ children }) => {
   const [character, setCharacter] = useState()
   const [comics, setComics] = useState()
   const [favorite, setFavorite] = useState([])
+  const [resultSearch, setResultSearch] = useState([])
 
   const getCharacters = async () => {
     let limit = 50
@@ -43,6 +45,17 @@ const CharacterProvider = ({ children }) => {
     }
   }
 
+  const handleSearch = async (word) => {
+    try {
+      setLoading(true)
+      setResultSearch(await fetchSearchCharacter(word))
+      if (resultSearch <= 0) setResultSearch({ message: 'Sin resultados' })
+      setLoading(false)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <CharacterContext.Provider
       value={{
@@ -53,11 +66,14 @@ const CharacterProvider = ({ children }) => {
         comics,
         favorite,
         setFavorite,
+        resultSearch,
+        setResultSearch,
 
         // FUNCTION
         getCharacters,
         handleGetCharacter,
         handleFavorite,
+        handleSearch,
       }}
     >
       {children}

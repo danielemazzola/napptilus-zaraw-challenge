@@ -34,3 +34,14 @@ export const fetchComicsByCharacter = async (limit, id) => {
     console.log(error)
   }
 }
+export const fetchSearchCharacter = async (word) => {
+  try {
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}:443/v1/public/characters?nameStartsWith=${word}&&${MARVEL_KEY()}`
+    )
+    const data = await response.json()
+    return data.data
+  } catch (error) {
+    console.log(error)
+  }
+}
