@@ -1,0 +1,35 @@
+.characterContainer {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+.container-image {
+  width: 20%;
+  height: 100%;
+  display: flex;
+}
+.container-image > img {
+  object-fit: cover;
+  width: 100%;
+}
+.container-description {
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: start;
+  gap: 10px;
+}
+.container-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-description > div > h2 {
+  font-size: 2.5rem;
+}

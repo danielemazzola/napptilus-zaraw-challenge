@@ -1,0 +1,18 @@
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80svh;
+  flex-direction: column;
+}
+.error > p {
+  font-weight: bold;
+}
+.error > p:first-child {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.error > p:last-child {
+  font-size: 36px;
+  text-transform: uppercase;
+}
