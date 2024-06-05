@@ -4,17 +4,8 @@ import { FavoriteTrue, FavoriteFalse } from '../favorite/Favorite'
 import useCharacters from '../../hook/useCharacters'
 
 const Card = ({ character }) => {
-  const { favorite, setFavorite, handleGetCharacter } = useCharacters()
-
-  const handleFavorite = (character) => {
-    const isFavorite = favorite.some((ele) => ele.id === character.id)
-    if (!isFavorite) {
-      setFavorite([...favorite, character])
-    } else {
-      const updateFavorities = favorite.filter((ele) => ele.id !== character.id)
-      setFavorite(updateFavorities)
-    }
-  }
+  const { favorite, setFavorite, handleGetCharacter, handleFavorite } =
+    useCharacters()
 
   const isFavorite = favorite.some(
     (el) => el.id.toString() === character.id.toString()

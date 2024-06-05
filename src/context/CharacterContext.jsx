@@ -25,6 +25,17 @@ const CharacterProvider = ({ children }) => {
     setLoading(false)
   }
 
+  const handleFavorite = (character) => {
+    console.log(character)
+    const isFavorite = favorite.some((ele) => ele.id === character.id)
+    if (!isFavorite) {
+      setFavorite([...favorite, character])
+    } else {
+      const updateFavorities = favorite.filter((ele) => ele.id !== character.id)
+      setFavorite(updateFavorities)
+    }
+  }
+
   return (
     <CharacterContext.Provider
       value={{
@@ -38,6 +49,7 @@ const CharacterProvider = ({ children }) => {
         // FUNCTION
         getCharacters,
         handleGetCharacter,
+        handleFavorite,
       }}
     >
       {children}
