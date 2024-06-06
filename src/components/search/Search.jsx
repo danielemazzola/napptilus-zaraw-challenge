@@ -16,7 +16,6 @@ const Search = ({ length }) => {
   }
   useEffect(() => {
     if (searchTerm === '') {
-      getCharacters()
       setResultSearch([])
     }
   }, [searchTerm])

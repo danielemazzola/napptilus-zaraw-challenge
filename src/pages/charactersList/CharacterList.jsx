@@ -4,7 +4,7 @@ import useCharacters from '../../hook/useCharacters'
 import Card from '../../components/card/Card'
 import Search from '../../components/search/Search'
 const CharacterList = () => {
-  const { getCharacters, characters } = useCharacters()
+  const { getCharacters, characters, resultSearch } = useCharacters()
 
   useEffect(() => {
     if (characters) return
@@ -15,11 +15,15 @@ const CharacterList = () => {
     <div className="margin">
       <Search length={characters?.count} />
       <div className="container">
-        {characters?.results?.map((character, index) => (
-          <div key={index}>
-            <Card character={character} />
-          </div>
-        ))}
+        {resultSearch <= 0 && (
+          <>
+            {characters?.results?.map((character, index) => (
+              <div key={index}>
+                <Card character={character} />
+              </div>
+            ))}
+          </>
+        )}
       </div>
     </div>
   )

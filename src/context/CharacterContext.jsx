@@ -14,6 +14,7 @@ const CharacterProvider = ({ children }) => {
   const [comics, setComics] = useState()
   const [favorite, setFavorite] = useState([])
   const [resultSearch, setResultSearch] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
 
   const getCharacters = async () => {
     let limit = 50
@@ -49,7 +50,7 @@ const CharacterProvider = ({ children }) => {
     setLoading(true)
     const result = await fetchSearchCharacter(word)
     if (result.results <= 0) setResultSearch({ message: 'Sin resultados' })
-    else setCharacters(result)
+    else setResultSearch(result)
     setLoading(false)
   }
 
@@ -65,6 +66,8 @@ const CharacterProvider = ({ children }) => {
         setFavorite,
         resultSearch,
         setResultSearch,
+        searchTerm,
+        setSearchTerm,
 
         // FUNCTION
         getCharacters,
