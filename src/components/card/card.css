@@ -45,7 +45,6 @@
 
 @media (max-width: 449px) {
   .card-character {
-    display: flex;
     width: 100%;
     margin: 10px 0;
     clip-path: polygon(100% 0%, 100% 95%, 97% 100%, 0 100%, 0 0);
