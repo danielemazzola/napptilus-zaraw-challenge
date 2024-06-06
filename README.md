@@ -109,31 +109,41 @@ napptilus-challenge/
 │ │ ├── card/
 │ │ │ ├── Card.jsx
 │ │ │ ├── card.css
+│ │ │ └── helpers.jsx
 │ │ ├── comics/
 │ │ │ ├── Comics.jsx
-│ │ │ ├── comics.css
+│ │ │ └── comics.css
 │ │ ├── favorite/
 │ │ │ ├── Favorite.jsx
-│ │ │ ├── favorite.css
+│ │ │ └── favorite.css
 │ │ ├── hero/
 │ │ │ ├── Hero.jsx
-│ │ │ ├── hero.css
+│ │ │ └── hero.css
 │ │ ├── loader/
 │ │ │ ├── Loader.jsx
-│ │ │ ├── loader.css
+│ │ │ └── loader.css
 │ │ ├── search/
 │ │ │ ├── Search.jsx
-│ │ │ ├── search.css
+│ │ │ └── search.css
 │ ├── context/
 │ │ └── CharacterContext.jsx
 │ ├── hooks/
 │ │ └── useCharacters.jsx
 │ ├── pages/
 │ │ ├── Layout/
+│ │ │ └── LayoutMarvel.jsx
 │ │ ├── favoriteDetails/
+│ │ │ ├── FavoriteDetails.jsx
+│ │ │ └── favorites.css
 │ │ ├── error404/
+│ │ │ ├── Error404.jsx
+│ │ │ └── error.css
 │ │ ├── charactersList/
-│ │ └── characterDetail/
+│ │ │ ├── CharactersList.jsx
+│ │ │ └── characters.css
+│ │ ├── characterDetail/
+│ │ │ ├── CharacterDetail.jsx
+│ │ │ └── characterDetail.css
 │ ├── services/
 │ │ ├── api.jsx
 │ │ └── helpers/
