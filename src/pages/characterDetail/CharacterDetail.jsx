@@ -24,7 +24,7 @@ const CharacterDetail = () => {
           <div className="characterContainer">
             <div className="container-image">
               <img
-                src={`${val.thumbnail.path}.${val.thumbnail.extension}`}
+                src={`${val.thumbnail.path.replace('http', 'https')}.${val.thumbnail.extension}`}
                 alt={val.name}
                 loading="lazy"
               />
