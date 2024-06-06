@@ -41,3 +41,11 @@
 .card-character:hover .image-card img:hover {
   transform: scale(1.03);
 }
+
+@media (max-width: 449px) {
+  .card-character {
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+  }
+}

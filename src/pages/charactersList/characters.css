@@ -9,3 +9,9 @@
   gap: var(--dani-s);
   margin: var(--dani-m) 0;
 }
+@media (max-width: 449px) {
+  .container {
+    display: block;
+    width: 100%;
+  }
+}

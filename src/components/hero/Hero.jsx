@@ -12,7 +12,7 @@ const Hero = () => {
           height="52"
           viewBox="0 0 130 52"
           fill="none"
-          xmlns="https://www.w3.org/2000/svg"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <g clipPath="url(#clip0_8936_731)">
             <path d="M130 0H0V52H130V0Z" fill="#EC1D24" />
