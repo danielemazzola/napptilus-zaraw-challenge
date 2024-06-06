@@ -96,4 +96,7 @@
   #characterContainer {
     border-radius: 0px;
   }
+  .container-description {
+    width: 80%;
+  }
 }
