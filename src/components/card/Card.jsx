@@ -1,14 +1,11 @@
 import './card.css'
+import { isFavorite } from './helpers'
 import { Link } from 'react-router-dom'
 import { FavoriteTrue, FavoriteFalse } from '../favorite/Favorite'
 import useCharacters from '../../hook/useCharacters'
 
 const Card = ({ character }) => {
   const { favorite, handleGetCharacter, handleFavorite } = useCharacters()
-
-  const isFavorite = favorite.some(
-    (el) => el.id.toString() === character.id.toString()
-  )
 
   return (
     <div className="card-character">
@@ -32,7 +29,11 @@ const Card = ({ character }) => {
             handleFavorite(character)
           }}
         >
-          {isFavorite ? <FavoriteTrue /> : <FavoriteFalse />}
+          {isFavorite(favorite, character) ? (
+            <FavoriteTrue />
+          ) : (
+            <FavoriteFalse />
+          )}
         </div>
       </div>
     </div>
