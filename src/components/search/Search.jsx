@@ -45,8 +45,12 @@ const Search = ({ length }) => {
           placeholder="SEARCH CHARACTER..."
         />
       </div>
-      {resultSearch.message && <p> Sin resultados</p>}
-      <p>{resultSearch?.results?.length || length} results</p>
+      {resultSearch.message ? (
+        <p> Sin resultados</p>
+      ) : (
+        <p>{resultSearch?.results?.length || length} results</p>
+      )}
+
       {resultSearch?.results?.length > 0 && (
         <div>
           <div className="container">

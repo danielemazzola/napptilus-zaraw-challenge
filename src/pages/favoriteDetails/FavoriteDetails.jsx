@@ -9,7 +9,7 @@ const FavoriteDetails = () => {
     return (
       <div className="margin">
         <Search length={favorite.length} />
-        <p>You have no favorites 😢. Please click the logo to return home.</p>
+        <p>You have not favorites😢. Please click the logo to return home.</p>
       </div>
     )
   else
