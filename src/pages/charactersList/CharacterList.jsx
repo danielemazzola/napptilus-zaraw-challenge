@@ -9,7 +9,7 @@ const CharacterList = () => {
   useEffect(() => {
     if (characters) return
     else getCharacters()
-  }, [])
+  }, [characters, getCharacters])
 
   return (
     <div className="margin">

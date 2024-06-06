@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react'
 import Card from '../card/Card'
 
 const Search = ({ length }) => {
-  const { handleSearch, getCharacters, resultSearch, setResultSearch } =
-    useCharacters()
+  const { handleSearch, resultSearch, setResultSearch } = useCharacters()
   const [searchTerm, setSearchTerm] = useState('')
 
   const onSearchChange = (e) => {
