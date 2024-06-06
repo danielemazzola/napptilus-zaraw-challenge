@@ -49,7 +49,7 @@ const CharacterProvider = ({ children }) => {
     setLoading(true)
     const result = await fetchSearchCharacter(word)
     if (result.results <= 0) setResultSearch({ message: 'Sin resultados' })
-    else setResultSearch(result)
+    else setCharacters(result)
     setLoading(false)
   }
 

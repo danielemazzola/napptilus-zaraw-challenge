@@ -15,7 +15,7 @@ const FavoriteDetails = () => {
   else
     return (
       <div className="margin">
-        <Search length={favorite.length} />
+        {/*         <Search length={favorite.length} /> */}
         <div className="containerFavorite">
           <div>
             <h1>Favorites</h1>
