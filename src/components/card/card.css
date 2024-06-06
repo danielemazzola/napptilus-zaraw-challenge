@@ -31,8 +31,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--dani-s);
-  border-radius: 0 0 17px 0;
+  clip-path: polygon(100% 0%, 100% 80%, 95% 100%, 0 100%, 0 0);
 }
+
 .contain-card > h2 {
   color: white;
   font-size: var(--dani-15);
@@ -47,5 +48,6 @@
     display: flex;
     width: 100%;
     margin: 10px 0;
+    clip-path: polygon(100% 0%, 100% 95%, 97% 100%, 0 100%, 0 0);
   }
 }

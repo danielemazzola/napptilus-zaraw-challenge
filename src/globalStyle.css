@@ -34,18 +34,18 @@ h4 {
 
 ::-webkit-scrollbar {
   width: var(--dani-m);
-  background-color: var(--dani-red-color);
+  background-color: var(--dani-black-color);
 }
 ::-webkit-scrollbar-track {
   background-color: var(--primary);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--dani-black-color);
+  background-color: transparent;
   background-image: url('https://i.pinimg.com/originals/8d/12/f0/8d12f0382048031467ab02c9956be173.png');
-  background-size: var(--dani-xl);
+  background-size: var(--dani-xxl);
   background-repeat: no-repeat;
   background-position: center;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(226, 194, 52);
+  background-color: var(--dani-red-color);
 }
