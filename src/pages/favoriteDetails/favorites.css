@@ -13,3 +13,10 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+@media (max-width: 449px) {
+  .containerCards {
+    display: block;
+    width: 100%;
+  }
+}
