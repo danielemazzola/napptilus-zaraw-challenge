@@ -51,13 +51,11 @@ const CharacterDetail = () => {
             <h1>Comics</h1>
           </div>
           <div className="containComic">
-            {comics?.results
-              .map((ele, index) => (
-                <div key={index}>
-                  <Comics comic={ele} />
-                </div>
-              ))
-              .reverse()}
+            {comics?.results.map((ele, index) => (
+              <div key={index}>
+                <Comics comic={ele} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
