@@ -18,7 +18,7 @@ const Card = ({ character }) => {
           onClick={() => handleGetCharacter(character.id)}
         >
           <img
-            src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+            src={`${character.thumbnail.path.replace('http', 'https')}.${character.thumbnail.extension}`}
             alt={`${character.name}`}
             loading="lazy"
           />

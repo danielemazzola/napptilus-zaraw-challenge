@@ -4,7 +4,7 @@ const Comics = ({ comic }) => {
   return (
     <div className="container-images">
       <img
-        src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
+        src={`${comic.thumbnail.path.replace('http', 'https')}.${comic.thumbnail.extension}`}
         alt={comic.title}
         loading="lazy"
       />
