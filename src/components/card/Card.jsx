@@ -1,7 +1,7 @@
 import './card.css'
-import { isFavorite } from './helpers'
 import { Link } from 'react-router-dom'
 import { FavoriteTrue, FavoriteFalse } from '../favorite/Favorite'
+import { isFavorite } from './helpers'
 import useCharacters from '../../hook/useCharacters'
 
 const Card = ({ character }) => {
